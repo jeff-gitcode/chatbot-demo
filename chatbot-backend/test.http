@@ -1,0 +1,63 @@
+### Health Check - Test if the server is running
+GET http://localhost:8000/
+Content-Type: application/json
+
+###
+
+### Chat Endpoint - Basic conversation test
+POST http://localhost:8000/chat
+Content-Type: application/json
+
+{
+  "user_message": "Hello, how are you?"
+}
+
+###
+
+### Chat Endpoint - Ask a question
+POST http://localhost:8000/chat
+Content-Type: application/json
+
+{
+  "user_message": "What is the capital of France?"
+}
+
+###
+
+### Chat Endpoint - Technical question
+POST http://localhost:8000/chat
+Content-Type: application/json
+
+{
+  "user_message": "Explain what FastAPI is in simple terms."
+}
+
+###
+
+### Chat Endpoint - Code-related question
+POST http://localhost:8000/chat
+Content-Type: application/json
+
+{
+  "user_message": "Write a simple Python function to calculate the factorial of a number."
+}
+
+###
+
+### Chat Endpoint - Test with empty message (should handle gracefully)
+POST http://localhost:8000/chat
+Content-Type: application/json
+
+{
+  "user_message": ""
+}
+
+###
+
+### Chat Endpoint - Test with long message
+POST http://localhost:8000/chat
+Content-Type: application/json
+
+{
+  "user_message": "I'm working on a chatbot application using FastAPI and Ollama with the Qwen model. Can you help me understand the best practices for handling errors and improving response times?"
+}
